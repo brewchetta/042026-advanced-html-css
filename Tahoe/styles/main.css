@@ -159,5 +159,9 @@ footer {
         /*   z-index allows us to control whether it's on top or behind something   */
         z-index: 100;
         background: black;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
     }
 }
