@@ -19,6 +19,10 @@ nav {
     margin-bottom: 20px;
 }
 
+nav img {
+    width: 115px;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -101,6 +105,21 @@ section {
 
 section p {
     margin: 15px;
+}
+
+.learn-more-link img {
+    vertical-align: baseline;
+    margin-left: 0.5em;
+}
+
+.learn-more-link:hover,
+.learn-more-link:focus {
+    color: red;
+}
+
+.learn-more-link svg * {
+    stroke: currentColor;
+    stroke-width: 1.4;
 }
 
 header, main, footer {
