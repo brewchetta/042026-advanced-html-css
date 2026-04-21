@@ -5,7 +5,12 @@ html {
 }
 
 body {
-    background: #555;
+    /* background: #555; */
+    /* background-image: linear-gradient(blue 300px, cyan 500px, green); */
+    background:
+        linear-gradient(45deg, transparent, #2fb3fe),
+        url("../img/fun-year-round.jpg") center / cover;
+    background-attachment: fixed;
     margin: 20px;
     font-family: "Open Sans", sans-serif;
     line-height: 1.75;
@@ -62,8 +67,18 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-h1 {
-    font-size: 50px;
+h1 { /* clamp(lowest size, ideal size, largest size) */
+    /* vw ---> view width */
+    /* vh ---> view height */
+    font-size: clamp(90px, 7.5vw, 100px);
+}
+
+h1:hover {
+    background: linear-gradient(white, #97d0f2);
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 h1 + p {
@@ -96,7 +111,6 @@ header {
     color: #fff;
     text-align: center;
     padding: 50px 7% 50px 7%;
-    max-width: 800px;
     box-sizing: border-box;
 }
 
