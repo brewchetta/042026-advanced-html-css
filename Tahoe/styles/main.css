@@ -41,7 +41,7 @@ a {
     color: #2985d1;
 }
 
-/* NAV */
+/*  NAV  */
 
 nav {
     text-align: center;
@@ -97,6 +97,7 @@ h1:hover {
     color: transparent;
 }
 
+/* choose the neighboring <p> next to an <h1> */
 h1 + p {
     font-weight: 700;
     font-style: italic;
@@ -116,7 +117,7 @@ h3 {
     margin-top: 0;
 }
 
-h3 + p {
+section p:first-of-type {
     font-style: italic;
     font-weight: 700;
     opacity: 0.5;
