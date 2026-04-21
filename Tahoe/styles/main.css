@@ -1,5 +1,30 @@
+/* the greatest grandaddy of them all */
+:root {
+    --primary-bg-color: #2fb3fe;
+    --secondary-bg-color: #97d0f2;
+    --primary-font: "Open Sans", sans-serif;
+    --secondary-font: "Alfa Slab One", serif;
+    --primary-spacing: 20px;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+html {
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    background:
+        linear-gradient(45deg, transparent, var(--primary-bg-color)),
+        url("../img/fun-year-round.jpg") center / cover;
+    background-attachment: fixed;
+    margin: var(--primary-spacing);
+    font-family: var(--primary-font);
+    line-height: 1.75;
 }
 
 p::first-letter {
@@ -14,38 +39,20 @@ header h1::after {
     font-size: 40px;
 }
 
-html {
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-}
-
-body {
-    /* background: #555; */
-    /* background-image: linear-gradient(blue 300px, cyan 500px, green); */
-    background:
-        linear-gradient(45deg, transparent, #2fb3fe),
-        url("../img/fun-year-round.jpg") center / cover;
-    background-attachment: fixed;
-    margin: 20px;
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.75;
-}
-
 img {
     max-width: 100%;
     vertical-align: bottom;
 }
 
 a {
-    color: #2985d1;
+    color: var(--primary-bg-color);
 }
 
 /*  NAV  */
 
 nav {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--primary-spacing);
 }
 
 nav img {
@@ -63,7 +70,7 @@ nav ul a {
     color: #fff;
     font-weight: 800;
     text-transform: uppercase;
-    padding: 8px;
+    padding: calc( var(--primary-spacing) / 2 );
     display: inline-block;
 }
 
@@ -78,7 +85,7 @@ nav ul li {
 
 /* commas mean this, and that, and that */
 h1, h2, h3 {
-    font-family: "Alfa Slab One", serif;
+    font-family: var(--secondary-font);
     font-weight: normal;
     line-height: 1.2;
 }
@@ -90,7 +97,7 @@ h1 { /* clamp(lowest size, ideal size, largest size) */
 }
 
 h1:hover {
-    background: linear-gradient(white, #97d0f2);
+    background: linear-gradient(white, var(--secondary-bg-color));
     -moz-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text;
@@ -111,7 +118,7 @@ h2 {
 
 h3 {
     font-size: 24px;
-    background: #2fb3fe;
+    background: var(--primary-bg-color);
     color: white;
     padding: 15px;
     margin-top: 0;
@@ -154,7 +161,7 @@ header, section {
 }
 
 section p {
-    margin: 15px;
+    margin: calc( var(--primary-spacing) / 2);
 }
 
 section a[target="_blank"]::after {
