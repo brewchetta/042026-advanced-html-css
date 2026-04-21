@@ -2,9 +2,26 @@
 :root {
     --primary-bg-color: #2fb3fe;
     --secondary-bg-color: #97d0f2;
+    --tertiary-bg-color: #000;
     --primary-font: "Open Sans", sans-serif;
     --secondary-font: "Alfa Slab One", serif;
     --primary-spacing: 20px;
+    --white: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-bg-color: magenta;
+        --white: #818589;
+    }
+
+    h1,h2,h3 {
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    }
+
+    nav a {
+        text-decoration-color: var(--primary-bg-color);
+    }
 }
 
 *, *::before, *::after {
@@ -76,7 +93,7 @@ nav ul a {
 
 nav ul a:hover,
 nav ul a:focus {
-    color: #97d0f2;
+    color: var(--secondary-bg-color);
 }
 
 nav ul li {
@@ -97,7 +114,7 @@ h1 { /* clamp(lowest size, ideal size, largest size) */
 }
 
 h1:hover {
-    background: linear-gradient(white, var(--secondary-bg-color));
+    background: linear-gradient(var(--white), var(--secondary-bg-color));
     -moz-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text;
@@ -119,9 +136,10 @@ h2 {
 h3 {
     font-size: 24px;
     background: var(--primary-bg-color);
-    color: white;
+    color: var(--white);
     padding: 15px;
     margin-top: 0;
+    border-radius: 0 0 8px 8px;
 }
 
 section p:first-of-type {
@@ -132,7 +150,7 @@ section p:first-of-type {
 
 header {
     background: url("../img/masthead-darkened.jpg") center / cover;
-    color: #fff;
+    color: var(--white);
     text-align: center;
     padding: 50px 7% 50px 7%;
     box-sizing: border-box;
@@ -142,7 +160,7 @@ header {
 }
 
 h2 {
-    color: #fff;
+    color: var(--white);
     text-align: center;
 }
 
@@ -151,7 +169,8 @@ h2::before {
 }
 
 section {
-    background: #fff;
+    background: var(--white);
+    border-radius: 8px;
     padding: 25px;
     margin-bottom: 20px;
 }
@@ -176,7 +195,7 @@ section:last-child {
 section:last-child::before {
     content: "FAVORITE";
     font-weight: 800;
-    color: white;
+    color: var(--white);
     position: absolute;
     top: -30px;
     left: 8px;
@@ -229,7 +248,7 @@ main, footer {
 }
 
 footer {
-    color: #fff;
+    color: var(--white);
     text-align: center;
     font-weight: 300;
 }
@@ -246,7 +265,7 @@ footer {
         right: 0;
         /*   z-index allows us to control whether it's on top or behind something   */
         z-index: 100;
-        background: black;
+        background: var(--tertiary-bg-color);
         display: flex;
         justify-content: space-between;
         padding: 20px;
