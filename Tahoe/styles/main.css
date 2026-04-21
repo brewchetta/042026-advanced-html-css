@@ -160,6 +160,24 @@ section a[target="_blank"]::after {
     content: " »";
 }
 
+section:last-child {
+    border-top: solid pink 30px;
+    position: relative;
+}
+
+section:last-child::before {
+    content: "FAVORITE";
+    font-weight: 800;
+    color: white;
+    position: absolute;
+    top: -30px;
+    left: 8px;
+}
+
+section > a {
+    color: red;
+}
+
 /* the $= means ends with */
 a[href$=".pdf"] {
     background: url("../img/icon-pdf.png") no-repeat left center / 16px 16px;
