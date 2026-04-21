@@ -160,6 +160,27 @@ section a[target="_blank"]::after {
     content: " »";
 }
 
+/* the $= means ends with */
+a[href$=".pdf"] {
+    background: url("../img/icon-pdf.png") no-repeat left center / 16px 16px;
+    padding-left: 20px;
+}
+
+/* the ^= means starts with */
+a[href^="http"] {
+    background-image: url("../img/icon-external-link.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left center;
+    padding-left: 20px;
+}
+
+/* the *= means contains the word/phrase/pattern anywhere inside */
+a[href*="youtube.com"] {
+    background: url("../img/icon-youtube.svg") no-repeat left center / 16px 16px;
+    padding-left: 20px;
+}
+
 .learn-more-link img {
     vertical-align: baseline;
     margin-left: 0.5em;
