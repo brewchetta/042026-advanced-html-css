@@ -1,3 +1,27 @@
+/* BOX SHADOW STYLING */
+
+.category a {
+	box-shadow: 10px -10px 10px #000a;
+}
+
+.logo-wrapper {
+/* 	position: relative;
+	top: 40px;
+	z-index: -1; */
+}
+
+.logo-wrapper a {
+	transition: color 1s;
+	text-shadow: 2px 2px 0px #000, 4px 4px 0px #111, 6px 6px 0px #222, 8px 8px 0px #333, 10px 10px 0px #555;
+	transition: all 1s ease-in-out;
+}
+
+.logo-wrapper a:hover {
+	text-shadow: -2px -2px 0px #000, -4px -4px 0px #111, -6px -6px 0px #222, -8px -8px 0px #333, -10px -10px 0px #555;
+}
+
+/* OTHER STYLING */
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
