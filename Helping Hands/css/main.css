@@ -1,16 +1,143 @@
-*, *::before, *::after {
+/* FORM STYLING */
+
+form {
+	border: solid 1px #ddd;
+	border-radius: 0 0 8px 8px;
+	padding: 25px;
+}
+
+form label,
+input[type="submit"] {
+	display: block;
+	margin: 1em 0 0 0;
+}
+
+form label:first-of-type {
+	margin: 0;
+}
+
+input[type="radio"]+label,
+input[type="checkbox"]+label,
+select+label {
+	display: inline;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+	width: 100%;
+	display: block;
+	font-size: 16px;
+	background: #ddd;
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="submit"],
+select {
+	outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+input[type="submit"]:focus,
+select:focus {
+	background: #e1efff;
+	color: #02387a;
+}
+
+select {
+	width: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+fieldset ul {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset li {
+	list-style-type: none;
+}
+
+fieldset p {
+	margin-bottom: 0;
+}
+
+input[type="submit"] {
+	font-size: 20px;
+	padding: 10px 20px;
+	font-family: var(--font-secondary);
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	background: #6bb359;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	transition: transform 1s, color 1s, background 1s, box-shadow 1s;
+	box-shadow: 0 4px 10px #5550;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background: #449d44;
+	color: #ddd;
+	transform: scale(150%);
+	box-shadow: 0 4px 10px #555f;
+}
+
+@keyframes pop-out-pop-in {
+	0% {
+		transform: scale(100%);
+	}
+
+	50% {
+		transform: scale(90%);
+	}
+
+	100% {
+		transform: scale(100%);
+	}
+}
+
+input[type="radio"]:checked+label {
+	animation: pop-out-pop-in 0.2s linear;
+	transform: scale(100%);
+	display: inline-block;
+}
+
+
+/* OTHER STYLING */
+
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
+
 :root {
 	--font-primary: Ubuntu, sans-serif;
 	--font-secondary: Dosis, sans-serif;
 }
+
 html {
 	font-size: 17px;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 }
+
 body {
 	margin: 4px 0;
 	color: #666;
@@ -18,55 +145,72 @@ body {
 	font-weight: 300;
 	line-height: 1.7;
 }
-img, svg {
+
+img,
+svg {
 	max-width: 100%;
 	vertical-align: bottom;
 }
+
 a {
 	color: #7096C1;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
 	color: #6d98bf;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
 	font-family: var(--font-secondary);
 	font-weight: 700;
 	text-transform: uppercase;
 	line-height: 1.1;
 	color: #000;
 }
+
 h1 {
 	font-size: 38px;
 	text-align: center;
 	margin: 0 0 5px;
 }
+
 h2 {
 	font-weight: 600;
 	font-size: 22px;
 	margin: 30px 0;
 }
+
 h3 {
 	color: currentColor;
 	font-size: 18px;
 	margin: 0 0 7px;
 }
-h1 + p {
+
+h1+p {
 	margin-bottom: 30px;
 	text-align: center;
 }
+
 .content-wrapper {
 	margin: 0 auto;
 	max-width: 768px;
 	padding: 20px;
 }
+
 header {
 	border-bottom: 1px solid #ddd;
 }
+
 header nav {
 	text-align: center;
 	font-weight: 400;
 }
-nav ul, footer ul {
+
+nav ul,
+footer ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -74,10 +218,13 @@ nav ul, footer ul {
 	justify-content: center;
 	gap: 10px;
 }
-nav a, footer a {
+
+nav a,
+footer a {
 	color: #666;
 	text-decoration: none;
 }
+
 .form-heading {
 	background: #888;
 	color: #fff;
@@ -86,6 +233,7 @@ nav a, footer a {
 	border-radius: 8px 8px 0 0;
 	margin-bottom: 0;
 }
+
 aside section {
 	background: #eee;
 	border-radius: 8px;
@@ -93,13 +241,16 @@ aside section {
 	padding: 30px;
 	position: relative;
 }
+
 aside h3 {
 	display: flex;
 	align-items: center;
 }
+
 aside section p {
 	margin: 0;
 }
+
 .time-badge {
 	font-family: var(--font-secondary);
 	font-weight: 600;
@@ -114,12 +265,14 @@ aside section p {
 	top: -9px;
 	right: -9px;
 }
+
 .opportunity-icon {
 	height: 40px;
 	margin-right: 10px;
 	border-radius: 50%;
 	margin-left: -5px;
 }
+
 footer {
 	border-top: solid 1px #ddd;
 	font-size: 13px;
@@ -137,14 +290,17 @@ footer {
 		display: flex;
 		align-items: center;
 	}
+
 	header .logo {
 		margin-right: auto;
 		margin-top: -3px;
 	}
+
 	footer .content-wrapper {
 		display: flex;
 		align-items: center;
 	}
+
 	.copyright {
 		margin-left: auto;
 	}
@@ -155,25 +311,31 @@ footer {
 		padding: 30px;
 		max-width: 1100px;
 	}
+
 	main.content-wrapper {
 		padding: 40px 30px;
 	}
-	h1 + p {
+
+	h1+p {
 		width: 68%;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 50px;
 	}
+
 	h2 {
 		margin-top: 0;
 	}
+
 	.columns-2 {
 		display: flex;
 		gap: 5%;
 	}
+
 	.column-left {
 		width: 60%;
 	}
+
 	.column-right {
 		width: 35%;
 	}
