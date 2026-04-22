@@ -53,12 +53,14 @@
 }
 
 #menu-icon {
-	position: absolute;
+	position: fixed;
 	top: 10px;
 	right: 15px;
 	color: #fff;
 	padding: 7px;
 	cursor: pointer;
+	background: #222;
+	border-radius: 8px;
 }
 
 /* OTHER STYLING */
