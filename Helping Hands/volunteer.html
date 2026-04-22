@@ -27,6 +27,73 @@
 			<div class="column-left">
 				<h2 class="form-heading">Sign Up for More Info</h2>
 				
+				<!-- FORM FOR SIGNUP -->
+
+				<form>
+					<!-- TEXT INPUT -->
+					<label for="full-name-input">Full Name:</label>
+					<input id="full-name-input" name="full-name-input" type="text">
+
+					<!-- EMAIL INPUT -->
+					<label for="email-input">Email:</label>
+					<input id="email-input" name="email-input" type="email">
+
+					<!-- TEXTAREA -->
+					<label for="comment-input">Comments (availability, preference, etc.):</label>
+					<textarea name="comment-input" id="comment-input" rows="3" cols="30"></textarea>
+
+					<!-- RADIO BUTTONS -->
+					<fieldset>
+						<legend>I want to volunteer for:</legend>
+						<ul>
+							<li>
+								<input type="radio" name="volunteer-preference" id="soup-kitchen">
+								<label for="soup-kitchen">Soup Kitchen</label>
+							</li>
+							<li>
+								<input type="radio" name="volunteer-preference" id="dog-walking">
+								<label for="dog-walking">Doggo Walking</label>
+							</li>
+							<li>
+								<input type="radio" name="volunteer-preference" id="tutoring">
+								<label for="tutoring">Tutoring</label>
+							</li>
+
+							<p>Second Choice:</p>
+
+							<li>
+								<input type="radio" name="volunteer-second-choice" id="soup-kitchen-secondary">
+								<label for="soup-kitchen-secondary">Soup Kitchen</label>
+							</li>
+							<li>
+								<input type="radio" name="volunteer-second-choice" id="dog-walking-secondary">
+								<label for="dog-walking-secondary">Doggo Walking</label>
+							</li>
+							<li>
+								<input type="radio" name="volunteer-second-choice" id="tutoring-secondary">
+								<label for="tutoring-secondary">Tutoring</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<!-- SELECT TAG - dropdown input -->
+					<label for="availability-input">Availability</label>
+					<select name="availability-input" id="availability-input">
+						<option selected disabled>Choose One</option>
+						<option value="prefers-morning">Morning</option>
+						<option value="prefers-afternoon">Afternoon</option>
+						<option value="prefers-evening">Evening</option>
+						<option value="prefers-night">Dead of Night</option>
+					</select>
+
+					<input type="checkbox" name="agreement" id="agreement">
+					<label for="agreement">I agree to all the terms and services as part of signing up with Helping Hands</label>
+
+					<input type="submit" value="Submit">
+				</form>
+
+				<!-- CRUD - create read update delete -->
+
 			</div>
 			<aside class="column-right">
 				<h2>Volunteer Opportunities</h2>
