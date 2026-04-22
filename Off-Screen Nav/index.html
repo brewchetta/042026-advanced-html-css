@@ -10,8 +10,17 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+	<input type="checkbox" id="nav-checkbox">
+	<label for="nav-checkbox">
+		<img src="img/menu-icon.svg" alt="MENU" id="menu-icon">
+	</label>
+
 	<img src="img/nyc-logo.svg" class="nyc-logo" alt="NYC Logo">
 	<nav>
+		<label for="nav-checkbox">
+			<img src="img/close.svg" alt="CLOSE" id="close-button">
+		</label>
 		<ul>
 			<li><a href="#">Resources</a></li>
 			<li><a href="#">311</a></li>
@@ -21,6 +30,8 @@
 			<li><a href="#">Jobs</a></li>
 		</ul>
 	</nav>
+
+	<label id="menu-overlay" for="nav-checkbox"></label>
 	
 	<h1>New York City</h1>
 	
